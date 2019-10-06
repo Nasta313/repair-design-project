@@ -1,0 +1,57 @@
+@mixin flex {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+@mixin justify-content($value: flex-start) {
+	@if $value == flex-start {
+		-webkit-box-pack: start;
+		-ms-flex-pack: start;
+	} @else if $value == flex-end {
+		-webkit-box-pack: end;
+		-ms-flex-pack: end;
+	} @else if $value == space-between {
+		-webkit-box-pack: justify;
+		-ms-flex-pack: justify;
+	} @else if $value == space-around {
+		-ms-flex-pack: distribute;		
+	} @else {
+		-webkit-box-pack: $value;
+		-ms-flex-pack: $value;
+	}
+	-webkit-justify-content: $value;
+	-moz-justify-content: $value;
+	justify-content: $value;
+}
+
+@mixin align-self($value: auto) {
+	-webkit-align-self: $value;
+	-moz-align-self: $value;
+	@if $value == flex-start {
+		-ms-flex-item-align: start;
+	} @else if $value == flex-end {
+		-ms-flex-item-align: end;
+	} @else {
+		-ms-flex-item-align: $value;
+	}
+	align-self: $value;
+}
+@mixin button() {
+	min-width: 207px;
+    height: 51px;
+	font-family: 'FuturaDemiC';
+    font-size: $font-size-button;
+    line-height: $line-height-button;
+    text-transform: uppercase;
+    color: $text-color1;
+    outline: 0;
+	border-radius: 2px;
+	&:hover{
+        color: $text-color3;
+        background-color: $color-bg-light;
+        box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.5);
+    }
+}

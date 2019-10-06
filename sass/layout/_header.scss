@@ -1,0 +1,94 @@
+.header{
+    min-height: 83px;
+    padding: 0 calc(50% - 628px);
+    background-color: $color-bg-dack;
+    @include flex();
+    @include justify-content($value: space-between);
+    @media (max-width: $screen-xxl) {
+        padding: 0 18px;
+    }
+    @media (max-width: $screen-md) {
+        min-height: 57px;
+    }
+    &__h1{
+        visibility: hidden;
+        position: absolute;
+    }
+    &__logo,
+    &__nav,
+    &__contacts,
+    &__btn    {
+        @include align-self($value:center);
+    }
+}
+
+.logo{
+    display: block;
+    min-width: 170px;
+    font-family: 'FuturaDemiC';
+    font-size: $font-size-14;
+    line-height: $line-height-16;
+    color: $text-color2;
+    text-decoration: none;
+}
+
+.navigation{
+    width: 582px;
+    font-family: 'FuturaBookC';
+    font-size: $font-size-14;
+    line-height: $line-height-16;
+    color: $text-color1;
+    @media (max-width: $screen-lg) {
+        width: 430px;
+    }
+    @media (max-width: $screen-md) {
+        display: none;
+    }
+    &__list{
+        @include flex();
+        justify-content: space-between;
+        padding-left: 0;
+    }
+    &__item{
+        list-style: none;
+    }
+    &__link{
+        text-decoration: none;
+        color: $text-color1;
+        text-transform: uppercase;
+        &:hover{
+            color: $text-color2;
+        }
+        &--active{
+            color: $text-color2;
+        }
+    }
+}
+
+.contacts{
+    display: block;
+    min-width: 130px;
+    font-family: 'FuturaDemiC';
+    font-size: $font-size-14;
+    line-height: $line-height-16;
+    color: $text-color2;
+    @media (max-width: $screen-md) {
+        color: $text-color1;
+        text-decoration: none;
+    }
+    &:hover{
+        text-decoration: none;
+    }
+}
+
+.button-header{
+    min-width: 161px;
+    height: 37px;
+    border: 0;
+    box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
+    background-color: $color-bg-button;
+    @media (max-width: $screen-xl) {
+        display: none;
+    }
+    @include button();
+}
