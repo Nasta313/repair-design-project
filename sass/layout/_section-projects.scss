@@ -1,5 +1,244 @@
 .section-projects{
-    height: 560px;
-    padding: 100px 0 90px;
+    padding: 50px 0 90px;
     background-color: $color-bg-dack;
+    color: $text-color1;
+    @media (max-width: $screen-md) {
+        padding-top: 36px;
+    }
+}
+
+.project{
+    @include flex;
+    @include justify-content($value: space-between);
+    padding: 0 calc(50% - 720px);
+    overflow: hidden;
+    @media (max-width: $screen-md) {
+        flex-wrap: wrap;
+    }
+}
+
+.projects-navigation{
+    padding-right: 15%;
+    height: 125px;
+    @media (max-width: $screen-md) {
+        display: none;
+    }
+    @include flex;
+    @include justify-content($value: flex-end);
+    &__list{
+       padding-left: 0;
+       @include flex;
+       @include justify-content($value: flex-end);
+    }
+    &__item{
+        margin-left: 60px;
+        list-style: none;
+        @include align-self($value: center);
+    }
+    &__link{
+        font-family: "Yeseva One";
+        font-size: $font-size-14;
+        line-height: $line-height-19;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.3);
+        text-decoration: none;
+        &:hover{
+            color: $text-color2;
+        }
+        &--active{
+            border-bottom: 1px solid $text-color2;
+            color: $text-color2;
+        }
+    }
+}
+
+.projects-information{
+    min-width: 492px;
+    position: relative;
+    padding-left: 100px;
+    @media (max-width: $screen-md) {
+        padding-left: 0px;
+        min-width: 300px;
+    }
+    &__title{
+        width: 160px;
+        margin: 0 0 34px;
+        font-size: 27px;
+        line-height: 37px;
+        letter-spacing: -0.07em;
+        text-transform: uppercase;
+        color: $color-bg-button;
+        position: relative;
+        @media (max-width: $screen-md) {
+            font-size: 22px;
+            line-height: 30px;
+            text-align: center;
+            margin: 0 auto 22px;
+        }
+        &:after{
+            content:"";
+            position: absolute;
+            bottom: 20px;
+            left: 160px;
+            display: block;
+            width: 92px;
+            height: 1px;
+            background-color: $text-color2;
+            @media (max-width: $screen-md) {
+                display:none;
+            }
+        }
+    }
+    &__text{
+        font-family: "FuturaBookC";
+        font-size: 18px;
+        line-height: 29px;
+        max-width: 442px;
+        margin: 0 0 42px;
+        @media (max-width: $screen-md) {
+            padding-left: 18px;
+            text-align: center;
+            max-width: 310px;
+            font-size: 14px;
+            line-height: 22px;
+        }
+
+    }
+    &__properties-block{
+        @include flex;
+        @include justify-content($value: flex-start);
+        flex-wrap: wrap;
+    }
+    &__property{
+        width: 212px;
+        margin-bottom: 34px;
+        @media (max-width: $screen-md) {
+            width: 150px;
+            padding-left: 18px;
+        }
+        span{
+            display: block;
+        }
+    }
+    &__property-title{
+        font-family: 'Yeseva One';
+        font-size: 18px;
+        line-height: 25px;
+        text-transform: uppercase;
+        color: $text-color2;
+        @media (max-width: $screen-md) {
+            font-size: 14px;
+            line-height: 19px;
+        }
+    }
+    &__property-value{
+        font-family: 'FuturaBookC';
+        font-size: 15px;
+        line-height: 20px;
+        @media (max-width: $screen-md) {
+            font-size: 14px;
+            line-height: 19px;
+        }
+    }
+}
+
+.projects-slider{
+    position: relative;
+    @include flex;
+    @include justify-content($value: space-between);
+    flex-wrap: nowrap;
+    @media (max-width: $screen-md) {
+       padding: 0 18px;
+    }
+    &__image{
+        margin-right: 20px;
+        width: 679px;
+        height: 482px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        @media (max-width: $screen-md) {
+            width: 340px;
+            height: 240px;
+         }
+        &:first-of-type{
+            background-image: url(../../assets/images/image-project1.png);
+        }
+        &:nth-of-type(2){
+            background-image: url(../../assets/images/image-project2.png);
+        }
+    }
+}
+
+.slider-controls{
+    position: absolute;
+    &__left,
+    &__right{
+        display: block;
+        position: absolute;
+        top: 200px;
+        width: 55px;
+        height: 55px;
+        background-color: $color-bg-button;
+        border-radius: 50%;
+        @include flex;
+        @include justify-content($value: center);
+        &:hover{
+            box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.5);
+        }
+        @media (max-width: $screen-md) {
+           top: 90px;
+         }
+    }
+    &__right{
+        left: 710px;
+        @media (max-width: $screen-xxl) {
+            left: 550px;
+        }
+        @media (max-width: $screen-md) {
+            left: 268px;
+        }
+    }
+    &__left{
+        display: none;
+        @media (max-width: $screen-xxl) {
+            display: flex;
+        }
+    }
+    &__image{
+        display:block;
+        @include align-self($value: center);
+    }
+}
+
+.projects-controls1{
+    position: absolute;
+    bottom: -493px;
+    left: 100px;
+    width: 290px;
+    @media (max-width: $screen-md) {
+        display: none;
+    }
+    a>img{
+        margin: 0  10px;
+        &:hover{
+            background-color: $color-bg-button;
+        }
+    }
+    &__link{
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        margin: 0 18px;
+        background-color: $color-bg-light;
+        border-radius: 50%;
+        text-decoration: none;
+        background: rgba(255, 255, 255, 0.3);
+        &--active{
+            background: rgba(255, 255, 255, 1);
+        }
+        &:hover{
+            background: rgba(255, 255, 255, 0.7);
+        }
+        
+    }
 }

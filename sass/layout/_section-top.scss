@@ -48,7 +48,7 @@
     &__main-block{
         width: 100%;
         padding: 194px 0 0 60px;
-        background-image: linear-gradient(to top, rgba(19,19,19,0.7),rgba(19,19,19,0.7)), url(..assets/images/bg-image-top.png);
+        background-image: linear-gradient(to top, rgba(19,19,19,0.7),rgba(19,19,19,0.7)), url(../../assets/images/bg-image-top.png);
         background-size: cover;
         background-repeat: no-repeat;
         @media (max-width: $screen-md) {
@@ -135,7 +135,12 @@
     outline: 0;
     @include flex();
     @include justify-content($value:flex-end);
-   
+    @media (max-width: $screen-md) {
+        top: 484px;
+    }
+    @media (max-width: $screen-sm) {
+        display: none;
+    }
     &__text{
         display: block;
         padding: 12px;
@@ -145,7 +150,7 @@
     &__image{
         height: 29px;
         width: 29px;
-        background-image: url(assets/images/scroll-down.png);
+        background-image: url(../../assets/images/scroll-down.png);
         background-size: cover;
         @include align-self($value:center);
     }

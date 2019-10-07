@@ -566,7 +566,7 @@ template {
 .section-top__main-block {
   width: 100%;
   padding: 194px 0 0 60px;
-  background-image: linear-gradient(to top, rgba(19, 19, 19, 0.7), rgba(19, 19, 19, 0.7)), url(../assets/images/bg-image-top.png);
+  background-image: linear-gradient(to top, rgba(19, 19, 19, 0.7), rgba(19, 19, 19, 0.7)), url(../../assets/images/bg-image-top.png);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -706,6 +706,16 @@ template {
   -moz-justify-content: flex-end;
   justify-content: flex-end;
 }
+@media (max-width: 768px) {
+  .scroll-down {
+    top: 484px;
+  }
+}
+@media (max-width: 480px) {
+  .scroll-down {
+    display: none;
+  }
+}
 .scroll-down__text {
   display: block;
   padding: 12px;
@@ -717,7 +727,7 @@ template {
 .scroll-down__image {
   height: 29px;
   width: 29px;
-  background-image: url(/assets/images/scroll-down.png);
+  background-image: url(../../assets/images/scroll-down.png);
   background-size: cover;
   -webkit-align-self: center;
   -moz-align-self: center;
@@ -729,9 +739,333 @@ template {
 }
 
 .section-projects {
-  height: 560px;
-  padding: 100px 0 90px;
+  padding: 50px 0 90px;
   background-color: #131313;
+  color: #FFFFFF;
+}
+@media (max-width: 768px) {
+  .section-projects {
+    padding-top: 36px;
+  }
+}
+
+.project {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  justify-content: space-between;
+  padding: 0 calc(50% - 720px);
+  overflow: hidden;
+}
+@media (max-width: 768px) {
+  .project {
+    flex-wrap: wrap;
+  }
+}
+
+.projects-navigation {
+  padding-right: 15%;
+  height: 125px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  -moz-justify-content: flex-end;
+  justify-content: flex-end;
+}
+@media (max-width: 768px) {
+  .projects-navigation {
+    display: none;
+  }
+}
+.projects-navigation__list {
+  padding-left: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  -moz-justify-content: flex-end;
+  justify-content: flex-end;
+}
+.projects-navigation__item {
+  margin-left: 60px;
+  list-style: none;
+  -webkit-align-self: center;
+  -moz-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+.projects-navigation__link {
+  font-family: "Yeseva One";
+  font-size: 0.875rem;
+  line-height: 1.1875rem;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.3);
+  text-decoration: none;
+}
+.projects-navigation__link:hover {
+  color: #E3B873;
+}
+.projects-navigation__link--active {
+  border-bottom: 1px solid #E3B873;
+  color: #E3B873;
+}
+
+.projects-information {
+  min-width: 492px;
+  position: relative;
+  padding-left: 100px;
+}
+@media (max-width: 768px) {
+  .projects-information {
+    padding-left: 0px;
+    min-width: 300px;
+  }
+}
+.projects-information__title {
+  width: 160px;
+  margin: 0 0 34px;
+  font-size: 27px;
+  line-height: 37px;
+  letter-spacing: -0.07em;
+  text-transform: uppercase;
+  color: #E3B873;
+  position: relative;
+}
+@media (max-width: 768px) {
+  .projects-information__title {
+    font-size: 22px;
+    line-height: 30px;
+    text-align: center;
+    margin: 0 auto 22px;
+  }
+}
+.projects-information__title:after {
+  content: "";
+  position: absolute;
+  bottom: 20px;
+  left: 160px;
+  display: block;
+  width: 92px;
+  height: 1px;
+  background-color: #E3B873;
+}
+@media (max-width: 768px) {
+  .projects-information__title:after {
+    display: none;
+  }
+}
+.projects-information__text {
+  font-family: "FuturaBookC";
+  font-size: 18px;
+  line-height: 29px;
+  max-width: 442px;
+  margin: 0 0 42px;
+}
+@media (max-width: 768px) {
+  .projects-information__text {
+    padding-left: 18px;
+    text-align: center;
+    max-width: 310px;
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+.projects-information__properties-block {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.projects-information__property {
+  width: 212px;
+  margin-bottom: 34px;
+}
+@media (max-width: 768px) {
+  .projects-information__property {
+    width: 150px;
+    padding-left: 18px;
+  }
+}
+.projects-information__property span {
+  display: block;
+}
+.projects-information__property-title {
+  font-family: "Yeseva One";
+  font-size: 18px;
+  line-height: 25px;
+  text-transform: uppercase;
+  color: #E3B873;
+}
+@media (max-width: 768px) {
+  .projects-information__property-title {
+    font-size: 14px;
+    line-height: 19px;
+  }
+}
+.projects-information__property-value {
+  font-family: "FuturaBookC";
+  font-size: 15px;
+  line-height: 20px;
+}
+@media (max-width: 768px) {
+  .projects-information__property-value {
+    font-size: 14px;
+    line-height: 19px;
+  }
+}
+
+.projects-slider {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+@media (max-width: 768px) {
+  .projects-slider {
+    padding: 0 18px;
+  }
+}
+.projects-slider__image {
+  margin-right: 20px;
+  width: 679px;
+  height: 482px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (max-width: 768px) {
+  .projects-slider__image {
+    width: 340px;
+    height: 240px;
+  }
+}
+.projects-slider__image:first-of-type {
+  background-image: url(../../assets/images/image-project1.png);
+}
+.projects-slider__image:nth-of-type(2) {
+  background-image: url(../../assets/images/image-project2.png);
+}
+
+.slider-controls {
+  position: absolute;
+}
+.slider-controls__left, .slider-controls__right {
+  display: block;
+  position: absolute;
+  top: 200px;
+  width: 55px;
+  height: 55px;
+  background-color: #E3B873;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  justify-content: center;
+}
+.slider-controls__left:hover, .slider-controls__right:hover {
+  box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.5);
+}
+@media (max-width: 768px) {
+  .slider-controls__left, .slider-controls__right {
+    top: 90px;
+  }
+}
+.slider-controls__right {
+  left: 710px;
+}
+@media (max-width: 1256px) {
+  .slider-controls__right {
+    left: 550px;
+  }
+}
+@media (max-width: 768px) {
+  .slider-controls__right {
+    left: 268px;
+  }
+}
+.slider-controls__left {
+  display: none;
+}
+@media (max-width: 1256px) {
+  .slider-controls__left {
+    display: flex;
+  }
+}
+.slider-controls__image {
+  display: block;
+  -webkit-align-self: center;
+  -moz-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.projects-controls1 {
+  position: absolute;
+  bottom: -493px;
+  left: 100px;
+  width: 290px;
+}
+@media (max-width: 768px) {
+  .projects-controls1 {
+    display: none;
+  }
+}
+.projects-controls1 a > img {
+  margin: 0 10px;
+}
+.projects-controls1 a > img:hover {
+  background-color: #E3B873;
+}
+.projects-controls1__link {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 18px;
+  background-color: #FFFFFF;
+  border-radius: 50%;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.3);
+}
+.projects-controls1__link--active {
+  background: white;
+}
+.projects-controls1__link:hover {
+  background: rgba(255, 255, 255, 0.7);
 }
 
 /*# sourceMappingURL=style.css.map */
