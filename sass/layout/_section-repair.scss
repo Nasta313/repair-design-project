@@ -1,0 +1,77 @@
+.section-repair{
+    &__title{
+        @include title-section;
+        color: #181818;
+    }
+    &__icon{
+        @include icon-title;
+        background-image: url("../../assets/images/tools.png");
+    }
+    &__items{
+        @include flex;
+        @include justify-content($value: space-between);
+        flex-wrap: wrap;
+        padding: 0 calc(50% - 582px);
+        margin: 30px 0;
+        @media (max-width: $screen-md) {
+            margin: 40px 0;
+        }
+    }
+    &__item{
+        margin: 0 18px;
+        width: 330px;
+        padding: 0 31px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        @media (max-width: $screen-md) {
+            padding: 0;
+            margin: 0 18px 40px;
+         }
+        &:first-child{
+            background-image:  url("../../assets/images/redecorating.png");
+        }
+        &:nth-child(2){
+            background-image:  url("../../assets/images/overhaul.png");
+        }
+        &:last-child{
+            background-image:  url("../../assets/images/repair.png");
+        }
+    }
+    &__item-title{
+        font-family: "Yeseva One";
+        font-size: 18px;
+        line-height: 25px;
+        color: #363636;
+        margin: 0;
+        padding: 25px 34px 13px;
+    }
+    &__descr-list{
+        padding: 0 34px 50px;
+       margin: 0;
+       font-family: "FuturaBookC";
+        font-size: 15px;
+        line-height: 25px;
+        color: #959595;
+    }
+    &__item-descr{
+        background-color: $color-bg-light;
+        position:relative;
+        margin: 294px auto 0;
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+        @media (max-width: $screen-md) {
+            margin: 223px 0 0;
+            width: 270px;
+        }
+    }
+    &__button{
+        @include button();
+        background: #E3B873;
+        box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
+        border: 0;
+        min-width: 207px;
+        height: 51px;
+        position: relative;
+        bottom: -25;
+        z-index: 10;
+    }
+}

@@ -483,8 +483,6 @@ template {
   border: 0;
   box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
   background-color: #E3B873;
-  min-width: 207px;
-  height: 51px;
   font-family: "FuturaDemiC";
   font-size: 0.8125rem;
   line-height: 0.9375rem;
@@ -658,10 +656,10 @@ template {
 }
 
 .button2 {
-  background-color: transparent;
-  border: 1px solid #FFFFFF;
   min-width: 207px;
   height: 51px;
+  background-color: transparent;
+  border: 1px solid #FFFFFF;
   font-family: "FuturaDemiC";
   font-size: 0.8125rem;
   line-height: 0.9375rem;
@@ -1084,10 +1082,12 @@ template {
 }
 .section-video__icon {
   margin: 0 auto;
-  height: 28px;
-  width: 33px;
-  background-image: url("../../assets/images/video-icon.png");
+  height: 33px;
+  width: 28px;
   position: relative;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("../../assets/images/video-icon.png");
 }
 .section-video__icon::after, .section-video__icon::before {
   content: "";
@@ -1213,8 +1213,6 @@ template {
   height: 51px;
   border: 0;
   background-color: #E3B873;
-  min-width: 207px;
-  height: 51px;
   font-family: "FuturaDemiC";
   font-size: 0.8125rem;
   line-height: 0.9375rem;
@@ -1271,6 +1269,133 @@ template {
   font-family: "FuturaBookC";
   font-size: 16px;
   line-height: 22px;
+}
+
+.section-repair__title {
+  padding: 12px 0;
+  margin: 0;
+  font-family: "Yeseva One";
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #181818;
+}
+.section-repair__icon {
+  margin: 0 auto;
+  height: 33px;
+  width: 28px;
+  position: relative;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("../../assets/images/tools.png");
+}
+.section-repair__icon::after, .section-repair__icon::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  display: block;
+  height: 1px;
+  width: 32px;
+  background-color: #E3B873;
+}
+.section-repair__icon::after {
+  right: 45px;
+}
+.section-repair__icon::before {
+  left: 45px;
+}
+.section-repair__items {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 calc(50% - 582px);
+  margin: 30px 0;
+}
+@media (max-width: 768px) {
+  .section-repair__items {
+    margin: 40px 0;
+  }
+}
+.section-repair__item {
+  margin: 0 18px;
+  width: 330px;
+  padding: 0 31px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+@media (max-width: 768px) {
+  .section-repair__item {
+    padding: 0;
+    margin: 0 18px 40px;
+  }
+}
+.section-repair__item:first-child {
+  background-image: url("../../assets/images/redecorating.png");
+}
+.section-repair__item:nth-child(2) {
+  background-image: url("../../assets/images/overhaul.png");
+}
+.section-repair__item:last-child {
+  background-image: url("../../assets/images/repair.png");
+}
+.section-repair__item-title {
+  font-family: "Yeseva One";
+  font-size: 18px;
+  line-height: 25px;
+  color: #363636;
+  margin: 0;
+  padding: 25px 34px 13px;
+}
+.section-repair__descr-list {
+  padding: 0 34px 50px;
+  margin: 0;
+  font-family: "FuturaBookC";
+  font-size: 15px;
+  line-height: 25px;
+  color: #959595;
+}
+.section-repair__item-descr {
+  background-color: #FFFFFF;
+  position: relative;
+  margin: 294px auto 0;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+}
+@media (max-width: 768px) {
+  .section-repair__item-descr {
+    margin: 223px 0 0;
+    width: 270px;
+  }
+}
+.section-repair__button {
+  font-family: "FuturaDemiC";
+  font-size: 0.8125rem;
+  line-height: 0.9375rem;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  outline: 0;
+  border-radius: 2px;
+  background: #E3B873;
+  box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
+  border: 0;
+  min-width: 207px;
+  height: 51px;
+  position: relative;
+  bottom: -25;
+  z-index: 10;
+}
+.section-repair__button:hover {
+  color: #363636;
+  background-color: #FFFFFF;
+  box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.5);
 }
 
 /*# sourceMappingURL=style.css.map */

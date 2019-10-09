@@ -2,37 +2,12 @@
     min-height: 600px;
     background: linear-gradient(to top, $color-bg-light 50%, $color-bg-dack 50%);
     &__title{
-       padding: 12px 0;
-       margin: 0;
-        font-family: "Yeseva One";
-        font-size: 20px;
-        line-height: 28px;
-        text-align: center;
-        text-transform: uppercase;
+        @include title-section;
         color: #FFFFFF;
     }
     &__icon{
-        margin: 0 auto;
-        height: 28px;
-        width: 33px;
+        @include icon-title;
         background-image: url("../../assets/images/video-icon.png");
-        position: relative;
-        &::after,
-        &::before{
-            content: "";
-            position: absolute;
-            top: 50%;
-            display: block;
-            height: 1px;
-            width: 32px;
-            background-color: $color-bg-button;
-        }
-        &::after{
-            right: 45px;
-        }
-        &::before{
-            left: 45px;
-        }
     }
     &__text{
         max-width: 680px;

@@ -40,18 +40,52 @@
 	align-self: $value;
 }
 @mixin button() {
-	min-width: 207px;
-    height: 51px;
+	
 	font-family: 'FuturaDemiC';
     font-size: $font-size-button;
     line-height: $line-height-button;
     text-transform: uppercase;
     color: $text-color1;
-    outline: 0;
+	outline: 0;
+
 	border-radius: 2px;
 	&:hover{
         color: $text-color3;
         background-color: $color-bg-light;
         box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.5);
+    }
+}
+@mixin title-section() {
+	padding: 12px 0;
+	margin: 0;
+	font-family: "Yeseva One";
+	font-size: 20px;
+	line-height: 28px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+@mixin icon-title{
+	margin: 0 auto;
+	height: 33px;
+	width: 28px;
+	position: relative;
+	background-size: contain;
+	background-repeat: no-repeat;
+	&::after,
+    &::before{
+            content: "";
+            position: absolute;
+            top: 50%;
+            display: block;
+            height: 1px;
+            width: 32px;
+            background-color: $color-bg-button;
+    }
+    &::after{
+            right: 45px;
+    }
+    &::before{
+            left: 45px;
     }
 }
