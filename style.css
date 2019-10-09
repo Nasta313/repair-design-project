@@ -1068,4 +1068,209 @@ template {
   background: rgba(255, 255, 255, 0.7);
 }
 
+.section-video {
+  min-height: 600px;
+  background: linear-gradient(to top, #FFFFFF 50%, #131313 50%);
+}
+.section-video__title {
+  padding: 12px 0;
+  margin: 0;
+  font-family: "Yeseva One";
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+.section-video__icon {
+  margin: 0 auto;
+  height: 28px;
+  width: 33px;
+  background-image: url("../../assets/images/video-icon.png");
+  position: relative;
+}
+.section-video__icon::after, .section-video__icon::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  display: block;
+  height: 1px;
+  width: 32px;
+  background-color: #E3B873;
+}
+.section-video__icon::after {
+  right: 45px;
+}
+.section-video__icon::before {
+  left: 45px;
+}
+.section-video__text {
+  max-width: 680px;
+  position: relative;
+  margin: 0 auto;
+  padding: 35px 0 75px;
+  font-family: "FuturaBookC";
+  font-size: 20px;
+  line-height: 34px;
+  text-align: center;
+}
+.section-video__text::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 50%;
+  display: block;
+  height: 2px;
+  width: 55px;
+  background-color: #E3B873;
+}
+
+.video-wrap {
+  padding: 32px 0 63px;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  justify-content: center;
+}
+.video-wrap__video {
+  width: 817px;
+  height: 434px;
+}
+
+.video-button {
+  position: absolute;
+  top: 41%;
+  right: 49%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  justify-content: center;
+  height: 55px;
+  width: 55px;
+  border-radius: 50%;
+  background-color: #E3B873;
+}
+.video-button:hover {
+  box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.5);
+}
+.video-button img {
+  -webkit-align-self: center;
+  -moz-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  padding-left: 5px;
+}
+
+.contact-form {
+  margin: 0 auto;
+  max-width: 769px;
+}
+.contact-form__list {
+  list-style: none;
+  padding: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  justify-content: space-between;
+}
+.contact-form__label {
+  display: block;
+  font-family: "FuturaBookC";
+  font-size: 15px;
+  line-height: 20px;
+  color: rgba(54, 54, 54, 0.5);
+}
+.contact-form__input-text {
+  width: 231px;
+  border: 0;
+  border-bottom: 1px solid rgba(54, 54, 54, 0.3);
+  font-family: "FuturaBookC";
+  font-size: 18px;
+  line-height: 24px;
+  color: #363636;
+}
+.contact-form__submit {
+  width: 200px;
+  height: 51px;
+  border: 0;
+  background-color: #E3B873;
+  min-width: 207px;
+  height: 51px;
+  font-family: "FuturaDemiC";
+  font-size: 0.8125rem;
+  line-height: 0.9375rem;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  outline: 0;
+  border-radius: 2px;
+}
+.contact-form__submit:hover {
+  color: #363636;
+  background-color: #FFFFFF;
+  box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.5);
+}
+
+.checkbox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  justify-content: center;
+  margin-bottom: 123px;
+}
+.checkbox__el {
+  display: none;
+}
+.checkbox__el-1 {
+  content: "";
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+  background: #E3B873;
+  border-radius: 4px;
+  -webkit-align-self: center;
+  -moz-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+.checkbox__el:checked + .checkbox__el-1::before {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 10px;
+  border: 0 solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotateZ(45deg);
+  margin: 0px 5px;
+}
+.checkbox__text {
+  font-family: "FuturaBookC";
+  font-size: 16px;
+  line-height: 22px;
+}
+
 /*# sourceMappingURL=style.css.map */

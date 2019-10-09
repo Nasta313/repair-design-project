@@ -1,0 +1,67 @@
+.contact-form{
+    margin: 0 auto;
+    max-width: 769px;
+    &__list{
+        list-style: none;
+        padding:0;
+        @include flex;
+        @include justify-content($value: space-between);
+    }
+    &__label{
+        display: block;
+        font-family: "FuturaBookC";
+        font-size: 15px;
+        line-height: 20px;
+        color: rgba(54, 54, 54, 0.5);
+    }
+    &__input-text{
+        width: 231px;
+        border: 0;
+        border-bottom: 1px solid rgba(54, 54, 54, 0.3); 
+        font-family: "FuturaBookC";
+        font-size: 18px;
+        line-height: 24px;
+        color: #363636;
+    }
+    &__submit{
+        width: 200px;
+        height: 51px;
+        border: 0;
+        background-color: $color-bg-button;
+        @include button();
+    }
+    
+}
+
+.checkbox{
+    @include flex;
+    @include justify-content($value: center);
+    margin-bottom:123px;
+    &__el{
+      display: none;
+    }
+    &__el-1 {
+      content: "";
+      width: 18px;
+      height: 18px;
+      margin-right: 8px;
+      background: #E3B873;
+      border-radius: 4px;
+      @include align-self($value: center);
+    }
+    &__el:checked + &__el-1::before {
+        content: "";
+        display: block;
+        width: 6px;
+        height: 10px;
+        border: 0 solid white;
+        border-width: 0 2px 2px 0;
+        transform: rotateZ(45deg);
+        margin: 0px 5px;
+    } 
+    &__text{
+        font-family: "FuturaBookC";
+        font-size: 16px;
+        line-height: 22px;
+    }
+  }
