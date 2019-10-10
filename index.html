@@ -104,7 +104,10 @@
             <h3 class="section-video__title">online control</h3>
             <div class="section-video__icon"></div>
             <div class="video-wrap">
-                <video class="video-wrap__video" src="#"  poster="assets/images/image 6.png"></video>
+                
+                    <iframe class="video-wrap__video" src="https://www.youtube-nocookie.com/embed/W25aL7SWeJk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen poster="assets/images/image 6.png"></iframe>
+                
+                
                 <a class="video-button">
                     <img src="assets/images/Polygon.png" alt="stroke">
                 </a>
@@ -116,17 +119,17 @@
                     <ul class="contact-form__list">
                         <li  class="contact-form__item">
                             <label class="contact-form__label" for="name">Name</label>
-                            <input  class="contact-form__input-text" type="text" name="name" id="name" value="What is your name:">
+                            <input  class="contact-form__input-text" type="text" name="name" id="name" placeholder="What is your name:" required>
                         </li>
                         <li  class="contact-form__item">
                             <label class="contact-form__label" for="phone">Phone</label>
-                            <input class="contact-form__input-text" type="tel" name="phone" id="phone" value="Your phone number:">
+                            <input class="contact-form__input-text" type="tel" name="phone" id="phone" minlength="18" maxlength="18" placeholder="Your phone number:" required>
                         </li>
                         <li  class="contact-form__item">        
                             <input  class="contact-form__submit" type="submit" value="SUBMIT" >
                         </li>    
                     </ul>
-                    <label class="checkbox">
+                    <label class="contact-form__checkbox checkbox">
                         <input class="checkbox__el" type="checkbox">
                         <span class="checkbox__el-1"></span>
                         <span class="checkbox__text">I agree to the processing of personal data</span> 
@@ -184,6 +187,65 @@
                 </div>
             </div>
         </section>
+        <section class="section-advantages">
+            <div class="section-advantages__left">
+                <div class="section-advantages__elipse">
+                <ul  class="section-advantages__list">
+                    <li  class="section-advantages__list-item">
+                        <span class="section-advantages__circle">01</span>
+                        <span class="section-advantages__text"> Our specialist will arrive for measurements per day contact, or appoint a date convenient for you </span></li>
+                    <li  class="section-advantages__list-item">
+                        <span class="section-advantages__circle">02</span>
+                        <span class="section-advantages__text"> Free metering </span>
+                    </li>
+                    <li  class="section-advantages__list-item">
+                        <span class="section-advantages__circle">03</span>
+                        <span class="section-advantages__text"> Free consultation</span>
+                    </li>
+                    <li  class="section-advantages__list-item">
+                        <span class="section-advantages__circle">04</span>
+                        <span class="section-advantages__text"> Get a cost estimate and the timing of your future repairs</span>
+                    </li>
+                </ul>
+            </div>
+            </div>
+            <div class="section-advantages__right">
+                <form class="section-advantages__form form2" action="">
+                    <h5 class="form2__title">Leave a request for free departure of the measurer</h5>
+                    <ul class="form2__list">
+                            <li  class="form2__item">
+                                <label class="form2__label" for="name">Name</label>
+                                <input  class="form2__input-text" type="text" name="name" id="name" placeholder="What is your name:" required>
+                            </li>
+                            <li  class="form2__item">
+                                <label class="form2__label" for="phone">Phone</label>
+                                <input class="form2__input-text" type="tel" name="phone" id="phone" placeholder="Your phone number:" required>
+                            </li>
+                            <li  class="form2__item">
+                                <label class="form2__label" for="email">Email</label>
+                                <input class="form2__input-text" type="email" name="email" id="email" placeholder="Your email:" required>
+                            </li>
+                              
+                    </ul>
+                        <label class="checkbox">
+                            <input class="checkbox__el" type="checkbox">
+                            <span class="checkbox__el-1"></span>
+                            <span class="form2__checkbox checkbox__text">I agree to the processing of personal data</span> 
+                        </label>
+                        <div class="form2__item">        
+                                <input class="form2__submit" type="submit" value="Call the measurer" >
+                        </div> 
+                </form>
+                <div class="advantages-right">
+                    <div class="advantages-right__icon"></div>
+                    <p class="advantages-right__text">Help save 10 - 20% of the cost of materials</p>
+                </div>
+
+            </div>
+
+
+        </section>
+        sec
     </main>
     <footer></footer>
 </body>
