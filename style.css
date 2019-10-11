@@ -1652,4 +1652,108 @@ template {
   align-self: center;
 }
 
+.section-style {
+  padding: 138px calc(50% - 620px) 0;
+  margin: 149px 0 50px;
+  background-image: linear-gradient(to top, rgba(19, 19, 19, 0.7), rgba(19, 19, 19, 0.7)), url(../../assets/images/styles.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  justify-content: space-between;
+}
+@media (max-width: 1150px) {
+  .section-style {
+    display: none;
+  }
+}
+.section-style__left {
+  width: 400px;
+}
+@media (max-width: 1256px) {
+  .section-style__left {
+    margin-left: 43px;
+  }
+}
+.section-style__title {
+  margin: 0;
+  font-family: "Yeseva One";
+  font-size: 27px;
+  line-height: 37px;
+  text-transform: uppercase;
+  color: #E3B873;
+}
+.section-style__list {
+  list-style: none;
+  padding: 47px 0 97px;
+  margin: 0;
+}
+.section-style__list-item {
+  padding: 6px 0;
+}
+.section-style__link {
+  text-decoration: none;
+  font-family: "Proxima Nova";
+  font-size: 20px;
+  line-height: 34px;
+  color: #FFFFFF;
+}
+.section-style__link:hover {
+  color: #E3B873;
+}
+.section-style__link--active {
+  color: #E3B873;
+  border-bottom: 1px solid #E3B873;
+}
+.section-style__images {
+  position: relative;
+  width: 751px;
+}
+@media (max-width: 1256px) {
+  .section-style__images {
+    margin-right: 43px;
+  }
+}
+.section-style__img {
+  position: absolute;
+  width: 354px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+@media (max-width: 1256px) {
+  .section-style__img {
+    width: 300px;
+  }
+}
+.section-style__img:first-of-type {
+  top: -179px;
+  height: 557px;
+  background-image: url(../../assets/images/style-image.png);
+}
+.section-style__img:nth-child(2) {
+  height: 275px;
+  right: 0;
+  bottom: 701px;
+  background-image: url(../../assets/images/image-2.png);
+}
+.section-style__img:nth-child(3) {
+  height: 350px;
+  left: 0;
+  top: 418px;
+  background-image: url(../../assets/images/image-4.png);
+}
+.section-style__img:nth-child(4) {
+  height: 625px;
+  right: 0;
+  bottom: 40px;
+  background-image: url(../../assets/images/image-5.png);
+}
+
 /*# sourceMappingURL=style.css.map */
