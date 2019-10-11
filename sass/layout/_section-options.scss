@@ -1,0 +1,85 @@
+.section-options{
+    padding-top: 117px;
+    background: linear-gradient(to top, $color-bg-dack 49%, $color-bg-light 49%);
+    @media (max-width: $screen-xl) {
+        background: $color-bg-dack;
+    }
+    @media (max-width: $screen-md) {
+        padding-top: 52px;
+    }
+    &__title{
+        @include title-section;
+        @media (max-width: $screen-xl) {
+            color: $text-color1;
+        }
+        @media (max-width: $screen-md) {
+            font-size: 22px;
+            line-height: 30px;
+        }
+    }
+    &__icon{
+        @include icon-title;
+        background-image: url("../../assets/images/pensils.png");
+    }
+    &__text{
+        @include text-center;
+        padding: 5px 18px 40px;
+        line-height: 27px;
+        @media (max-width: $screen-xl) {
+           color: $text-color1;
+        }
+        @media (max-width: $screen-md) {
+            font-size: 15px;
+            line-height: 20px;
+        }
+    }
+    &__items{
+        @include flex;
+        @include justify-content($value: center);
+        align-content: flex-start;
+        padding: 0 calc(50% - 618px);
+        @media (max-width: $screen-xl) {
+            flex-wrap: wrap;
+        }
+        @media (max-width: $screen-md) {
+            margin: 40px 0;
+        }
+    }
+    &__item{
+        margin: 0 18px;
+        @include element;
+        @media (max-width: $screen-md) {
+            padding: 0;
+        }
+        &:first-child{
+            background-image:  url("../../assets/images/redecorating.png");
+        }
+        &:nth-child(2){
+            background-image:  url("../../assets/images/repair.png");
+        }
+        &:last-child{
+            background-image:  url("../../assets/images/image-repair.png");
+        }
+    }
+    &__item-title{
+        @include description-title;
+    }
+    &__descr-list{
+        @include description-list;
+    }
+    &__item-descr{
+        margin: 294px auto 0;
+        background-color: $color-bg-light;
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+        @media (max-width: $screen-md) {
+            margin: 223px 0 0;
+            width: 270px;
+        }
+    }
+    &__button{
+        position: relative;
+        bottom: 25px;
+        @include button-style;
+        @include button-size;
+    }
+}

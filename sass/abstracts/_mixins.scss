@@ -39,21 +39,33 @@
 	}
 	align-self: $value;
 }
-@mixin button() {
-	
+@mixin button-style {
 	font-family: 'FuturaDemiC';
     font-size: $font-size-button;
     line-height: $line-height-button;
     text-transform: uppercase;
     color: $text-color1;
 	outline: 0;
-
+	border: 0;
 	border-radius: 2px;
+	background: #E3B873;
+	box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
 	&:hover{
         color: $text-color3;
-        background-color: $color-bg-light;
-        box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.5);
+        box-shadow: 0px 5px 15px rgba(66, 54, 34, 0.5);
     }
+}
+@mixin button-size{
+	min-width: 207px;
+    height: 51px;
+}
+
+@mixin text-center{
+	max-width: 680px;
+	margin: 0 auto;
+	font-family: "FuturaBookC";
+	font-size: 20px;
+	text-align: center;
 }
 @mixin title-section() {
 	padding: 12px 0;
@@ -64,7 +76,28 @@
 	text-align: center;
 	text-transform: uppercase;
 }
-
+@mixin description-list{
+	padding: 0 34px 50px;
+	margin: 0;
+	font-family: "FuturaBookC";
+	font-size: 15px;
+	line-height: 25px;
+	color: #959595;
+}
+@mixin description-title{
+	font-family: "Yeseva One";
+    font-size: 18px;
+    line-height: 25px;
+    color: #363636;
+    margin: 0;
+    padding: 25px 34px 13px;
+}
+@mixin element{
+	width: 330px;
+	padding: 0 31px;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
 @mixin icon-title{
 	margin: 0 auto;
 	height: 33px;
