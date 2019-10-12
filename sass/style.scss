@@ -1,8 +1,18 @@
 
 @import "base/reset";
 @import "typography";
+
+/*abstracts*/
+
 @import "abstracts/variables";
 @import "abstracts/mixins";
+
+/*components*/
+
+@import "components/pagination";
+
+/*lauout*/
+
 @import "layout/header";
 @import "layout/section-top";
 @import "layout/section-projects";
@@ -12,4 +22,5 @@
 @import "layout/section-advantages";
 @import "layout/section-style";
 @import "layout/section-options";
+@import "layout/section-steps";
 @import "layout/footer";
