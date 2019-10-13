@@ -122,9 +122,19 @@
             left: 45px;
     }
 }
+@mixin form-title{
+	width: 297px;
+	margin: 0 auto;
+	
+	font-family: "FuturaDemiC";
+	font-size: 20px;
+	line-height: 25px;
+	text-align: center;
+	color: $color-bg-light;
+}
 
-@mixin form-text{
-	width: 231px;
+
+@mixin form-input{
 	border: 0;
 	border-bottom: 1px solid rgba(54, 54, 54, 0.3); 
 	font-family: "FuturaBookC";
@@ -137,5 +147,4 @@
     font-family: "FuturaBookC";
     font-size: 15px;
     line-height: 20px;
-    
 }

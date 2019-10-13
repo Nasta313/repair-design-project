@@ -158,8 +158,6 @@
     }
     &__controls{
         display: none;
-        width: 88%;
-        margin: 0 6%;
         @media (max-width: $screen-xl) {
             top: 56%;
             display: flex;

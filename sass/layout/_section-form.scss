@@ -1,67 +1,56 @@
 .contact-form{
     margin: 0 auto;
     max-width: 769px;
+    @media (max-width: $screen-lg) {
+        padding: 0 18px;
+        max-width:100%;
+        background-color: $color-bg-dack;
+    }
+
     &__list{
         list-style: none;
-        padding:0;
+        padding: 0;
+        margin: 0;
         @include flex;
         @include justify-content($value: space-between);
+        @media (max-width: $screen-md) {
+            flex-wrap: wrap;
+            @include justify-content($value: center);
+        }
     }
+
     &__label{
-        display: block;
-        font-family: "FuturaBookC";
-        font-size: 15px;
-        line-height: 20px;
+        @include form-label;
         color: rgba(54, 54, 54, 0.5);
+        @media (max-width: $screen-md) {
+            font-size: 15px;
+            line-height: 20px;
+            color: rgba(255, 255, 255, 0.5);
+        }
     }
+
     &__input-text{
         width: 231px;
-        border: 0;
-        border-bottom: 1px solid rgba(54, 54, 54, 0.3); 
-        font-family: "FuturaBookC";
-        font-size: 18px;
-        line-height: 24px;
+        @include form-input;
         color: #363636;
+        background-color: transparent;
+        @media (max-width: $screen-md) {
+            width: 341px;
+        }
     }
+
     &__submit{
         width: 200px;
         height: 51px;
         border: 0;
         background-color: $color-bg-button;
-        @include button();
+        @include button-style;
+        @media (max-width: $screen-md) {
+            width: 341px;
+        }
     }
-    
-}
 
-.checkbox{
-    @include flex;
-    @include justify-content($value: center);
-    margin-bottom:123px;
-    &__el{
-      display: none;
+    &__checkbox{
+        padding: 34px 0 123px;
     }
-    &__el-1 {
-      content: "";
-      width: 18px;
-      height: 18px;
-      margin-right: 8px;
-      background: #E3B873;
-      border-radius: 4px;
-      @include align-self($value: center);
-    }
-    &__el:checked + &__el-1::before {
-        content: "";
-        display: block;
-        width: 6px;
-        height: 10px;
-        border: 0 solid white;
-        border-width: 0 2px 2px 0;
-        transform: rotateZ(45deg);
-        margin: 0px 5px;
-    } 
-    &__text{
-        font-family: "FuturaBookC";
-        font-size: 16px;
-        line-height: 22px;
-    }
-  }
+}

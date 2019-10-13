@@ -1,30 +1,30 @@
 .section-projects{
-    padding: 50px 0 90px;
+    padding: 50px 0 90px 0;
     background-color: $color-bg-dack;
     color: $text-color1;
     @media (max-width: $screen-md) {
         padding-top: 36px;
     }
-}
 
-.project{
-    @include flex;
-    @include justify-content($value: space-between);
-    padding: 0 calc(50% - 720px);
-    overflow: hidden;
-    @media (max-width: $screen-md) {
-        flex-wrap: wrap;
+    &__controls{
+        position: absolute;
+        bottom: -493px;
+        left: 100px;
+        width: 290px;
+        @media (max-width: $screen-xl) {
+            display: none;
+        }
     }
 }
 
 .projects-navigation{
     padding-right: 15%;
     height: 125px;
-    @media (max-width: $screen-md) {
-        display: none;
-    }
     @include flex;
     @include justify-content($value: flex-end);
+    @media (max-width: $screen-xl) {
+        display: none;
+    }
     &__list{
        padding-left: 0;
        @include flex;
@@ -52,16 +52,26 @@
     }
 }
 
-.projects-information{
-    min-width: 492px;
+.projects-container{
+    @include flex;
+    @include justify-content($value: space-between);
+    flex-wrap: wrap;
     position: relative;
-    padding-left: 100px;
-    @media (max-width: $screen-md) {
-        padding-left: 0px;
-        min-width: 300px;
+    @media (max-width: $screen-xxl) {
+        @include justify-content($value: space-around);
+    }
+    &__block-1{
+        max-width: 424px;
+        padding-left: 6.9%;
+        @media (max-width: $screen-xxl) {
+            padding-left: 30px;
+        }
+        @media (max-width: $screen-xl) {
+            padding-left: 0;
+        }
     }
     &__title{
-        width: 160px;
+        max-width: 160px;
         margin: 0 0 34px;
         font-size: 27px;
         line-height: 37px;
@@ -69,6 +79,10 @@
         text-transform: uppercase;
         color: $color-bg-button;
         position: relative;
+        @media (max-width: $screen-xl) {
+            text-align: center;
+            margin: 0 auto 34px;
+        }
         @media (max-width: $screen-md) {
             font-size: 22px;
             line-height: 30px;
@@ -84,8 +98,8 @@
             width: 92px;
             height: 1px;
             background-color: $text-color2;
-            @media (max-width: $screen-md) {
-                display:none;
+            @media (max-width: $screen-xl) {
+                display: none;
             }
         }
     }
@@ -93,24 +107,44 @@
         font-family: "FuturaBookC";
         font-size: 18px;
         line-height: 29px;
-        max-width: 442px;
+        max-width: 424px;
         margin: 0 0 42px;
-        @media (max-width: $screen-md) {
-            padding-left: 18px;
+        @media (max-width: $screen-xl) {
             text-align: center;
-            max-width: 310px;
+        }
+        @media (max-width: $screen-md) {
+            max-width: 315px;
             font-size: 14px;
             line-height: 22px;
         }
 
     }
     &__properties-block{
+        width: 365px;
         @include flex;
-        @include justify-content($value: flex-start);
+        @include justify-content($value: space-between);
         flex-wrap: wrap;
+        position: absolute;
+        bottom: 54px;
+        left: 6.9%;
+        @media (max-width: $screen-xxl) {
+            left: 30px;
+        }
+        @media (max-width: $screen-xl) {
+            margin-top: 30px;
+            width: 800px;
+            position: static;
+            
+        }
+        @media (max-width: $screen-xl) {
+            
+            width: 365px;
+           
+            
+        }
     }
     &__property{
-        width: 212px;
+        width: 175px;
         margin-bottom: 34px;
         @media (max-width: $screen-md) {
             width: 150px;
@@ -142,24 +176,49 @@
     }
 }
 
-.projects-slider{
+
+.slider{
     position: relative;
-    @include flex;
-    @include justify-content($value: space-between);
-    flex-wrap: nowrap;
+    width: 58.9%;
+    overflow: hidden;
+    height: 482px;
+    @media (max-width: $screen-xl) {
+        width: 73%;
+    }
+    @media (max-width: $screen-lg) {
+        width: 90%;
+        height: 400px;
+    }
     @media (max-width: $screen-md) {
-       padding: 0 18px;
+       
+        height: 350px;
+    }
+    @media (max-width: $screen-sm) {
+       
+        height: 300px;
+    }
+    @media (max-width: $screen-sm) {
+        height: 242px;
+    }
+    &__container{
+        width: 2500px;
+        height: 100%;
+        @include flex;
+        @include justify-content($value: flex-start);
     }
     &__image{
         margin-right: 20px;
         width: 679px;
-        height: 482px;
+        height: 100%;
         background-size: cover;
         background-repeat: no-repeat;
-        @media (max-width: $screen-md) {
-            width: 340px;
-            height: 240px;
-         }
+        @media (max-width: $screen-xl) {
+            width: 31%;
+        }
+        @media (max-width: $screen-sm) {
+            background-size: contain;
+        }
+    
         &:first-of-type{
             background-image: url(../../assets/images/image-project1.png);
         }
@@ -167,15 +226,20 @@
             background-image: url(../../assets/images/image-project2.png);
         }
     }
-}
+    &__controls{
+        top: 45%;
+    }
+    
 
-.slider-controls{
-    position: absolute;
-    &__left,
-    &__right{
-        display: block;
+}
+.controls{
+        width: 90%;
+        padding: 0 5%;
         position: absolute;
-        top: 200px;
+        @include flex;
+        @include justify-content($value: space-between);
+    
+    &__button{
         width: 55px;
         height: 55px;
         background-color: $color-bg-button;
@@ -185,60 +249,16 @@
         &:hover{
             box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.5);
         }
-        @media (max-width: $screen-md) {
-           top: 90px;
-         }
-    }
-    &__right{
-        left: 710px;
-        @media (max-width: $screen-xxl) {
-            left: 550px;
-        }
-        @media (max-width: $screen-md) {
-            left: 268px;
-        }
-    }
-    &__left{
-        display: none;
-        @media (max-width: $screen-xxl) {
-            display: flex;
+        &:first-of-type{
+            visibility: hidden;
+            @media (max-width: $screen-xl) {
+                visibility: visible;
+            }
         }
     }
     &__image{
-        display:block;
         @include align-self($value: center);
     }
 }
 
-.projects-controls1{
-    position: absolute;
-    bottom: -493px;
-    left: 100px;
-    width: 290px;
-    @media (max-width: $screen-md) {
-        display: none;
-    }
-    a>img{
-        margin: 0  10px;
-        &:hover{
-            background-color: $color-bg-button;
-        }
-    }
-    &__link{
-        display: inline-block;
-        width: 10px;
-        height: 10px;
-        margin: 0 18px;
-        background-color: $color-bg-light;
-        border-radius: 50%;
-        text-decoration: none;
-        background: rgba(255, 255, 255, 0.3);
-        &--active{
-            background: rgba(255, 255, 255, 1);
-        }
-        &:hover{
-            background: rgba(255, 255, 255, 0.7);
-        }
-        
-    }
-}
+

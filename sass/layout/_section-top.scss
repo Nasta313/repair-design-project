@@ -86,7 +86,6 @@
             max-width: 320px;
         }
     }
-
     &__buttons{
         max-width: 434px;
         @include flex();
@@ -95,30 +94,35 @@
             flex-wrap: wrap;
         }
     }
-
     &__buttton1{
         margin-bottom: 26px;
     }
 }
-
 .button1{
     box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.3);
     background-color: $color-bg-button;
     border: 0;
-    min-width: 207px;
-    height: 51px;
-    @include button();
+    @include button-size;
+    @include button-style;
     @media (max-width: $screen-sm) {
         min-width: 339px;
     }
 }
-
 .button2{
-    min-width: 207px;
-    height: 51px;
+    @include button-size;
     background-color: transparent;
     border: 1px solid #FFFFFF;
-    @include button();
+    font-family: 'FuturaDemiC';
+    font-size: $font-size-button;
+    line-height: $line-height-button;
+    text-transform: uppercase;
+    color: $text-color1;
+    outline: 0;
+    border-radius: 2px;
+	&:hover{
+        color: $text-color2;
+        border: 1px solid$text-color2;
+    }
     @media (max-width: $screen-sm) {
         min-width: 339px;
     }
