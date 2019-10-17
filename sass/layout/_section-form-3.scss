@@ -1,13 +1,13 @@
 .section-bottom{
     width: 100%;
-    margin-top: 312px;
+    margin-top: 310px;
     padding-bottom: 66px;
-    background-image: linear-gradient(to top, rgba(19,19,19,0.9),rgba(19,19,19,0.9)), url(../../assets/images/bg-bottom.png);
+    background-image: linear-gradient(to top, rgba(19,19,19,0.9),rgba(19,19,19,0.9)), url(assets/images/bg-bottom.png);
     background-size: 100%;
     background-repeat: no-repeat;
     @media (max-width: $screen-lg) {
         margin-top: 0;
-        background: $color-bg-dack;
+        background: $color-2;
         padding-bottom: 0px;
     } 
     &__content{
@@ -17,13 +17,15 @@
     }
 
     &__contacts-container{
-        padding: 52px 0 43px;
+        padding: 33px 0 40px;
         width: 40%;
         min-width: 340px;
         max-width: 590px;
         @media (max-width: $screen-lg) {
             order: 3;
-           
+        } 
+        @media (max-width: $screen-sm) {
+            padding: 20px 0 40px;
         } 
     }
 
@@ -47,6 +49,9 @@
         margin: 0 auto;
         @include flex;
         @include justify-content($value: space-between);
+        @media (max-width: $screen-sm) {
+            width: 100px;
+        }
     }
 
     &__link-mail,
@@ -54,28 +59,32 @@
         height: 28px;
         width: 28px;
         display: block;
-        background-color: $color-bg-button;
+        background-color: $color-3;
         background-size: 50%;
         background-position: center;
         background-repeat: no-repeat;
         border-radius: 50%;
+        @media (max-width: $screen-sm) {
+            height: 35px;
+            width: 35px;
+        }
         &:hover{
             box-shadow: 0px 5px 15px rgba(240, 203, 139, 0.5);
         }
     }
 
     &__link-mail{
-        background-image: url(../../assets/images/icon-mail.png);
+        background-image: url(assets/images/icon-mail.png);
     }
 
     &__link-instagram{
-        background-image: url(../../assets/images/icon-insta.png);
+        background-image: url(assets/images/icon-insta.png);
     }
     &__map{
-        width: 81%;
+        width: 64%;
         min-width: 320px;
         height: 465px;
-        background-color: $color-bg-dack;
+        background-color: $color-2;
         box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.15);
         @media (max-width: $screen-lg) {
             order: 2;
@@ -88,21 +97,35 @@
             height: 255px;
         } 
     }
+    &__iframe{
+        border: 0;
+        height: 100%;
+        width: 100%;
+    }
 
     &__form{
         width: 61.3%;
         min-width: 320px;
-        margin: -200px 0 0;
+        margin: -225px 0 0;
         padding-bottom: 34px;
-        background-color: $color-bg-dack;
+        background-color: $color-2;
         @media (max-width: $screen-lg) {
             order: 1;
             margin: 30px 0 30px;
-            
+        } 
+        @media (max-width: $screen-md) {
+            margin: 0 0 10px;
         } 
     }
     &__form-title{
-        @include form-title;
+        width: 272px;
+        margin: 0 auto;
+        font-size: 20px;
+        text-align: center;
+        color: $color-1;
+        font-family: "Yeseva One";
+        font-size: 20px;
+        line-height: 28px;
         text-transform: uppercase;
         padding: 34px 0;
     }
@@ -130,13 +153,12 @@
 
     &__form-input{
         @include form-input;
-        color: $text-color1;
-        background-color: $color-bg-dack;
+        color: $color-1;
+        background-color: $color-2;
         width: 100%;
         min-width: 231px;
         @media (max-width: $screen-lg) {
             min-width: 320px;
-            
         } 
     }
 
@@ -151,12 +173,18 @@
         display: block;
         margin: 50px auto 0;
         border: 0;
-        background-color: $color-bg-button;
+        background-color: $color-3;
         @include button-style;
+        @include button-text;
+        @media (max-width: $screen-md) {
+            margin: 77px auto 0;
+            width: 340px;
+            height: 51px;
+        }
     }
 
     &__checkbox{
-        color: $text-color1;
-        
+        color: $color-1;
+        @include justify-content($value: center);
     }
 }

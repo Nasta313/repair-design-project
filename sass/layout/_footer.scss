@@ -1,7 +1,7 @@
 .footer{
     min-height: 133px;
     padding: 0 calc(50% - 628px);
-    background-color: $color-bg-dack;
+    background-color: $color-2;
     @include flex();
     @include justify-content($value: space-between);
     @media (max-width: $screen-xxl) {

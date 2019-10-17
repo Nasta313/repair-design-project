@@ -1,9 +1,8 @@
 .section-video{
-    min-height: 600px;
-    background: linear-gradient(to top, $color-bg-light 50%, $color-bg-dack 50%);
+    background: linear-gradient(to top, $color-1 60%, $color-2 60%);
     @media (max-width: $screen-lg) {
-        background: $color-bg-dack;
-        color:$text-color1;
+        background: $color-2;
+        color:$color-1;
     }
     &__title{
         @include title-section;
@@ -11,16 +10,17 @@
     }
     &__icon{
         @include icon-title;
-        background-image: url("../../assets/images/video-icon.png");
+        background-image: url("assets/images/video-icon.png");
     }
     &__text{
         @include text-center;
         position: relative;
-        padding: 35px 18px 75px;
+        padding: 26px 18px 96px;
         line-height: 34px;
         @media (max-width: $screen-md) {
            font-size: 14px;
             line-height: 24px;
+            padding: 15px 18px 30px;
         }
         &::after{
             content: "";
@@ -30,33 +30,48 @@
             display: block;
             height: 1px;
             width: 55px;
-            background-color: $color-bg-button;
+            background-color: $color-3;
         }
     }
-
 }
 
 .video-wrap{
-    padding:32px 0 63px;
+    padding: 26px 0 63px;
     position:relative;
     @include flex;
     @include justify-content($value: center);
+    @media (max-width: $screen-md) {
+        padding: 40px 0 30px;
+    }
     &__video{
         width: 817px;
         height: 434px;
+        border:0;
+        @media (max-width: $screen-md) {
+            height: 300px;
+        }
+        @media (max-width: $screen-sm) {
+            height: 207px;
+        }
     }
 }
 
 .video-button{
     position: absolute;
-    top: 41%;
-    right: 49%;
+    margin: 0 auto;
+    top: 38%;
     @include flex;
     @include justify-content($value: center);
-    height: 55px;
-    width: 55px;
+    height: 85px;
+    width: 85px;
     border-radius: 50%;
-    background-color: $color-bg-button;
+    background-color: $color-3;
+    @media (max-width: $screen-md) {
+        top: 48%;
+        height: 35px;
+        width: 35px;
+    }
+    
     &:hover{
         box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.5);
     }

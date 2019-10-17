@@ -1,6 +1,7 @@
+/*base*/
 
 @import "base/reset";
-@import "typography";
+@import "base/typography";
 
 /*abstracts*/
 
@@ -11,6 +12,9 @@
 
 @import "components/pagination";
 @import "components/checkbox";
+@import "components/scroll-down";
+@import "components/slider";
+@import "components/controls";
 
 
 /*lauout*/

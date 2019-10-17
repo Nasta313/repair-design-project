@@ -1,53 +1,58 @@
 .section-projects{
-    padding: 50px 0 90px 0;
-    background-color: $color-bg-dack;
-    color: $text-color1;
+    padding: 50px 0 80px 0;
+    position: relative;
+    background-color: $color-2;
+    color: $color-1;
     @media (max-width: $screen-md) {
-        padding-top: 36px;
+       
+        padding: 36px 0 15px 0;
     }
 
     &__controls{
         position: absolute;
-        bottom: -493px;
+        bottom: 78px;
         left: 100px;
         width: 290px;
         @media (max-width: $screen-xl) {
             display: none;
         }
     }
-}
 
-.projects-navigation{
-    padding-right: 15%;
-    height: 125px;
-    @include flex;
-    @include justify-content($value: flex-end);
-    @media (max-width: $screen-xl) {
-        display: none;
+    &__nav{
+        padding-right: 15%;
+        height: 125px;
+        @include flex;
+        @include justify-content($value: flex-end);
+        @media (max-width: $screen-xl) {
+            display: none;
+        }
     }
-    &__list{
-       padding-left: 0;
-       @include flex;
-       @include justify-content($value: flex-end);
+
+    &__nav-list{
+        padding-left: 0;
+        @include flex;
+        @include justify-content($value: flex-end);
     }
-    &__item{
+
+    &__nav-item{
         margin-left: 60px;
         list-style: none;
         @include align-self($value: center);
     }
-    &__link{
+
+    &__nav-link{
         font-family: "Yeseva One";
-        font-size: $font-size-14;
-        line-height: $line-height-19;
+        font-size: 14px;
+        line-height: 19px;
         text-transform: uppercase;
         color: rgba(255, 255, 255, 0.3);
         text-decoration: none;
         &:hover{
-            color: $text-color2;
+            color: $color-3;
         }
         &--active{
-            border-bottom: 1px solid $text-color2;
-            color: $text-color2;
+            border-bottom: 1px solid $color-3;
+            color: $color-3;
         }
     }
 }
@@ -72,12 +77,12 @@
     }
     &__title{
         max-width: 160px;
-        margin: 0 0 34px;
+        margin: 0 0 20px;
         font-size: 27px;
         line-height: 37px;
         letter-spacing: -0.07em;
         text-transform: uppercase;
-        color: $color-bg-button;
+        color: $color-3;
         position: relative;
         @media (max-width: $screen-xl) {
             text-align: center;
@@ -97,12 +102,13 @@
             display: block;
             width: 92px;
             height: 1px;
-            background-color: $text-color2;
+            background-color: $color-3;
             @media (max-width: $screen-xl) {
                 display: none;
             }
         }
     }
+
     &__text{
         font-family: "FuturaBookC";
         font-size: 18px;
@@ -116,16 +122,17 @@
             max-width: 315px;
             font-size: 14px;
             line-height: 22px;
+            padding-bottom: 20px;
         }
-
     }
+
     &__properties-block{
         width: 365px;
         @include flex;
         @include justify-content($value: space-between);
         flex-wrap: wrap;
         position: absolute;
-        bottom: 54px;
+        bottom: 58px;
         left: 6.9%;
         @media (max-width: $screen-xxl) {
             left: 30px;
@@ -134,18 +141,15 @@
             margin-top: 30px;
             width: 800px;
             position: static;
-            
         }
         @media (max-width: $screen-xl) {
-            
             width: 365px;
-           
-            
         }
     }
+
     &__property{
         width: 175px;
-        margin-bottom: 34px;
+        margin-bottom: 43px;
         @media (max-width: $screen-md) {
             width: 150px;
             padding-left: 18px;
@@ -154,17 +158,19 @@
             display: block;
         }
     }
+
     &__property-title{
         font-family: 'Yeseva One';
         font-size: 18px;
         line-height: 25px;
         text-transform: uppercase;
-        color: $text-color2;
+        color: $color-3;
         @media (max-width: $screen-md) {
             font-size: 14px;
             line-height: 19px;
         }
     }
+
     &__property-value{
         font-family: 'FuturaBookC';
         font-size: 15px;
@@ -175,90 +181,3 @@
         }
     }
 }
-
-
-.slider{
-    position: relative;
-    width: 58.9%;
-    overflow: hidden;
-    height: 482px;
-    @media (max-width: $screen-xl) {
-        width: 73%;
-    }
-    @media (max-width: $screen-lg) {
-        width: 90%;
-        height: 400px;
-    }
-    @media (max-width: $screen-md) {
-       
-        height: 350px;
-    }
-    @media (max-width: $screen-sm) {
-       
-        height: 300px;
-    }
-    @media (max-width: $screen-sm) {
-        height: 242px;
-    }
-    &__container{
-        width: 2500px;
-        height: 100%;
-        @include flex;
-        @include justify-content($value: flex-start);
-    }
-    &__image{
-        margin-right: 20px;
-        width: 679px;
-        height: 100%;
-        background-size: cover;
-        background-repeat: no-repeat;
-        @media (max-width: $screen-xl) {
-            width: 31%;
-        }
-        @media (max-width: $screen-sm) {
-            background-size: contain;
-        }
-    
-        &:first-of-type{
-            background-image: url(../../assets/images/image-project1.png);
-        }
-        &:nth-of-type(2){
-            background-image: url(../../assets/images/image-project2.png);
-        }
-    }
-    &__controls{
-        top: 45%;
-    }
-    
-
-}
-.controls{
-        width: 90%;
-        padding: 0 5%;
-        position: absolute;
-        @include flex;
-        @include justify-content($value: space-between);
-    
-    &__button{
-        width: 55px;
-        height: 55px;
-        background-color: $color-bg-button;
-        border-radius: 50%;
-        @include flex;
-        @include justify-content($value: center);
-        &:hover{
-            box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.5);
-        }
-        &:first-of-type{
-            visibility: hidden;
-            @media (max-width: $screen-xl) {
-                visibility: visible;
-            }
-        }
-    }
-    &__image{
-        @include align-self($value: center);
-    }
-}
-
-

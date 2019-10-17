@@ -1,7 +1,7 @@
 .header{
     min-height: 83px;
     padding: 0 calc(50% - 628px);
-    background-color: $color-bg-dack;
+    background-color: $color-2;
     @include flex();
     @include justify-content($value: space-between);
     @media (max-width: $screen-xxl) {
@@ -26,18 +26,18 @@
     display: block;
     min-width: 170px;
     font-family: 'FuturaDemiC';
-    font-size: $font-size-14;
-    line-height: $line-height-16;
-    color: $text-color2;
+    font-size: 14px;
+    line-height: 16px;
+    color: $color-3;
     text-decoration: none;
 }
 
 .navigation{
     width: 582px;
     font-family: 'FuturaBookC';
-    font-size: $font-size-14;
-    line-height: $line-height-16;
-    color: $text-color1;
+    font-size: 14px;
+    line-height: 16px;
+    color: $color-1;
     @media (max-width: $screen-lg) {
         width: 430px;
     }
@@ -54,13 +54,13 @@
     }
     &__link{
         text-decoration: none;
-        color: $text-color1;
+        color: $color-1;
         text-transform: uppercase;
         &:hover{
-            color: $text-color2;
+            color: $color-3;
         }
         &--active{
-            color: $text-color2;
+            color: $color-3;
         }
     }
 }
@@ -69,11 +69,11 @@
     display: block;
     min-width: 130px;
     font-family: 'FuturaDemiC';
-    font-size: $font-size-14;
-    line-height: $line-height-16;
-    color: $text-color2;
+    font-size: 14px;
+    line-height: 16px;
+    color: $color-3;
     @media (max-width: $screen-md) {
-        color: $text-color1;
+        color: $color-1;
         text-decoration: none;
     }
     &:hover{
@@ -86,8 +86,9 @@
     height: 37px;
     border: 0;
     box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
-    background-color: $color-bg-button;
+    background-color: $color-3;
     @include button-style();
+    @include button-text;
     @media (max-width: $screen-xl) {
         display: none;
     }

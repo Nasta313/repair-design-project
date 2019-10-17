@@ -1,7 +1,7 @@
 .section-style{
     padding: 138px calc(50% - 620px) 0;
     margin: 149px 0 50px;
-    background-image: linear-gradient(to top, rgba(19,19,19,0.7),rgba(19,19,19,0.7)), url(../../assets/images/styles.png);
+    background-image: linear-gradient(to top, rgba(19,19,19,0.7),rgba(19,19,19,0.7)), url(assets/images/styles.png);
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
@@ -9,7 +9,7 @@
     @include justify-content($value: space-between);
     @media (max-width: $screen-xl) {
         display: block;
-        background: linear-gradient(to top, $color-bg-dack 40%, $color-bg-light 40%);
+        background: linear-gradient(to top, $color-2 40%, $color-1 40%);
         padding: 0;
         margin: 0;
     }
@@ -30,7 +30,7 @@
         }
     }
     &__title{
-        max-width: 400px;
+        max-width: 380px;
         margin: 0;
         font-family: 'Yeseva One';
         font-size: 27px;
@@ -51,14 +51,14 @@
     }
     &__list{
         list-style: none;
-        padding: 47px 0 97px;
+        padding:36px 0 76px;
         margin: 0;
         @media (max-width: $screen-xl) {
             display: none;
         }
     }
     &__list-item{
-        padding: 6px 0;
+        padding-bottom: 15px;
     }
     &__link{
         text-decoration: none;
@@ -67,11 +67,11 @@
         line-height: 34px;
         color: #FFFFFF;
         &:hover{
-            color: $text-color2;
+            color: $color-3;
         }
         &--active{
-            color: $text-color2;
-            border-bottom: 1px solid $text-color2;
+            color: $color-3;
+            border-bottom: 1px solid $color-3;
         }
     }
     &__images{
@@ -103,7 +103,7 @@
         &:first-of-type{
             top: -179px;
             height: 557px;
-            background-image: url(../../assets/images/style-image.png);
+            background-image: url(assets/images/style-image.png);
             @media (max-width: $screen-xl) {
                 height: 505px;
                 background-size: cover;
@@ -118,10 +118,7 @@
                 height:350px;
             }
             @media (max-width: $screen-sm) {
-                height:295px;
-            }
-            @media (max-width: $screen-xs) {
-                height: 242px;
+                height:242px;
             }
 
         }
@@ -130,7 +127,7 @@
             height:275px;
             right: 0;
             bottom: 701px;
-            background-image: url(../../assets/images/image-2.png);
+            background-image: url(assets/images/image-2.png);
             @media (max-width: $screen-xl) {
                display: none;
             }
@@ -139,7 +136,7 @@
             height:350px;
             left: 0;
             top: 418px;
-            background-image: url(../../assets/images/image-4.png);
+            background-image: url(assets/images/image-4.png);
             @media (max-width: $screen-xl) {
                 display: none;
                 
@@ -149,7 +146,7 @@
             height:625px;
             right: 0;
            bottom: 40px;
-            background-image: url(../../assets/images/image-5.png);
+            background-image: url(assets/images/image-5.png);
             @media (max-width: $screen-xl) {
                 display: none;
                 
@@ -161,6 +158,9 @@
         @media (max-width: $screen-xl) {
             top: 56%;
             display: flex;
+        }
+        @media (max-width: $screen-xl) {
+            top: 64%;
         }
     }
 

@@ -1,20 +1,20 @@
 .section-top {
     padding-left: calc(50% - 770px);
     min-height: 707px;
-    background-color: $color-bg-dack;
-    color: $text-color1;
+    background-color: $color-2;
+    color: $color-1;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    @include flex();
+    @include justify-content($value: flex-start);
     @media (max-width: $screen-md) {
         min-height: 476px;
     }
-    @include flex();
-    @include justify-content($value: flex-start);
 
     &__instagram-block {
-        padding-top: 272px;
+        padding-top: 263px;
         margin: 0 auto;
         width: 82px;
-        background-color: $color-bg-dack;
+        background-color: $color-2;
         @media (max-width: $screen-xl) {
             width: 30px;
         }
@@ -27,9 +27,9 @@
         display: block;
         margin: 0 auto;
         font-family: 'FuturaDemiC';
-        font-size: $font-size-14;
-        line-height: $line-height-16;
-        color: $text-color2;
+        font-size: 14px;
+        line-height: 16px;
+        color: $color-3;
         text-transform: uppercase;
         text-decoration: none;
         transform: rotate(90deg);
@@ -37,18 +37,18 @@
             content:" ";
             display: block;
             position: relative;
-            top: 8px;
-            left: 100px;
+            top: 7px;
+            left: 91px;
             height: 1px;
             width: 51px;
-            background-color: $color-bg-button;
+            background-color: $color-3;
         }
     }
 
     &__main-block{
         width: 100%;
-        padding: 194px 0 0 60px;
-        background-image: linear-gradient(to top, rgba(19,19,19,0.7),rgba(19,19,19,0.7)), url(../../assets/images/bg-image-top.png);
+        padding: 191px 0 0 60px;
+        background-image: linear-gradient(to top, rgba(19,19,19,0.7),rgba(19,19,19,0.7)), url(assets/images/bg-image-top.png);
         background-size: cover;
         background-repeat: no-repeat;
         @media (max-width: $screen-md) {
@@ -57,35 +57,38 @@
     }
 
     &__h2 {
-        margin-top: 0;
+        margin: 0 0 17px;
         max-width: 550px;
         font-family: "Yeseva One";
-        font-size: $font-size-title;
-        line-height: $line-height-title;
+        font-size: 40px;
+        line-height: 53px;
         text-transform: uppercase;
         @media (max-width: $screen-md) {
             font-size: 23px;
             line-height: 132.83%;
         }
         span{
-            color: $text-color2;
+            color: $color-3;
         }
     }
 
     &__text{
         max-width: 500px;
-        margin: 16px 0 32px;
-        font-family: FuturaBookC;
-        font-size: $font-size-22;
-        line-height: $line-height-30;
+        margin: 0px 0 44px;
+        font-family: "FuturaBookC";
+        font-size: 22px;
+        line-height: 30px;
         @media (max-width: $screen-md) {
             font-size: 18px;
             line-height: 135.84%;
         }
         @media (max-width: $screen-sm) {
             max-width: 320px;
+            margin: 0px 0 30px;
         }
+       
     }
+
     &__buttons{
         max-width: 434px;
         @include flex();
@@ -94,75 +97,46 @@
             flex-wrap: wrap;
         }
     }
-    &__buttton1{
+
+    &__button-1{
         margin-bottom: 26px;
-    }
-}
-.button1{
-    box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.3);
-    background-color: $color-bg-button;
-    border: 0;
-    @include button-size;
-    @include button-style;
-    @media (max-width: $screen-sm) {
-        min-width: 339px;
-    }
-}
-.button2{
-    @include button-size;
-    background-color: transparent;
-    border: 1px solid #FFFFFF;
-    font-family: 'FuturaDemiC';
-    font-size: $font-size-button;
-    line-height: $line-height-button;
-    text-transform: uppercase;
-    color: $text-color1;
-    outline: 0;
-    border-radius: 2px;
-	&:hover{
-        color: $text-color2;
-        border: 1px solid$text-color2;
-    }
-    @media (max-width: $screen-sm) {
-        min-width: 339px;
-    }
-}
-.scroll-down{
-    position: absolute;
-    top: 740px;
-    left: -49px;
-    width: 247px;
-    height: 97px;
-    color: $text-color1;
-    font-family: "Yeseva One";
-    font-size: $font-size-14;
-    line-height: $line-height-18;
-    text-transform: uppercase;
-    background-color: rgba(19,19,19,0.1);
-    border: 0;
-    outline: 0;
-    @include flex();
-    @include justify-content($value:flex-end);
-    @media (max-width: $screen-md) {
-        top: 484px;
-    }
-    @media (max-width: $screen-sm) {
-        display: none;
-    }
-    &__text{
-        display: block;
-        padding: 12px;
-        @include align-self($value:center);
+        box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.3);
+        background-color: $color-3;
+        border: 0;
+        @include button-size;
+        @include button-style;
+        @include button-text;
+        @media (max-width: $screen-sm) {
+            min-width: 339px;
+        }
     }
 
-    &__image{
-        height: 29px;
-        width: 29px;
-        background-image: url(../../assets/images/scroll-down.png);
-        background-size: cover;
-        @include align-self($value:center);
+    &__button-2{
+        @include button-size;
+        background-color: transparent;
+        border: 1px solid $color-1;
+        @include button-text;
+        color: $color-1;
+        border-radius: 2px;
+        &:hover{
+            color: $color-3;
+            border: 1px solid $color-3;
+        }
+        @media (max-width: $screen-sm) {
+            min-width: 339px;
+        }
     }
-    &:hover{
-        box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.1);
+
+    &__scroll-down{
+        position: absolute;
+        top: 740px;
+        left: -49px;
+        z-index:10;
+        @media (max-width: $screen-md) {
+            top: 484px;
+        }
+        @media (max-width: $screen-sm) {
+            display: none;
+        }
     }
 }
