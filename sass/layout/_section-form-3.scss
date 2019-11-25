@@ -142,7 +142,6 @@
     }
 
     &__form-item{
-        @include form-input;
         margin-bottom: 48px;
         min-width: 230px;
         width: 45.5%;
@@ -153,7 +152,6 @@
 
     &__form-input{
         @include form-input;
-        color: $color-1;
         background-color: $color-2;
         width: 100%;
         min-width: 231px;
